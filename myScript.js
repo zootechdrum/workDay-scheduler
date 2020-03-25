@@ -1,1 +1,4 @@
-console.log("Hello")
+$( document ).ready(()=> {
+    $("#currentDay").append(moment().format("L"))
+})
+

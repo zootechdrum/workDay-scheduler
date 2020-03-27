@@ -21,5 +21,5 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-##Image of Working App
+## Image of Working App
 ![image of working app](./images/picOfApp.png)

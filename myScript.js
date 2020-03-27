@@ -25,7 +25,6 @@ $(document).ready(() => {
   //change colors of text area depending on the current time
 
   const updateColor = () => {
-    console.log("H")
     let currentHour = moment().hour()
 
 

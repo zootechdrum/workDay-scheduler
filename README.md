@@ -23,3 +23,18 @@ THEN the saved events persist
 
 ## Image of Working App
 ![image of working app](./images/picOfApp.png)
+
+
+### Interesting bit of Code
+```javascript
+  function formatAMPM(hours) {
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    return hours + ampm;
+  }
+```
+Although the above is not my code. I "barrowed " this snippet of code from github user.
+I really liked the way they used the modulo operator. It is a real clever way to display the time for the time 
+schedule in the DOM. 
+

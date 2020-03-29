@@ -47,7 +47,9 @@ $(document).ready(() => {
 
 //When save button is pressed
 $("#container").on("click",'.saveBtn', function (){
-  console.log($(this).attr("data-button"))
+  const dataButton = $(this).attr("data-button");
+  const text = $("#text-"+dataButton).val()
+  console.log(text)
 })
 
 

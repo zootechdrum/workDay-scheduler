@@ -1,5 +1,7 @@
 $(document).ready(() => {
 
+
+
   //appends the current date to jumbotron
   $("#currentDay").append(moment().format("L"))
 
@@ -46,13 +48,26 @@ $(document).ready(() => {
 
 
 //When save button is pressed
-$("#container").on("click",'.saveBtn', function (){
-  const dataButton = $(this).attr("data-button");
-  const text = $("#text-"+dataButton).val()
-  console.log(text)
+$("#container").on("click",'.saveBtn', () => {
+
+  const dataIdButton = $(this).attr("data-button");
+  const text = $("#text-"+dataIdButton).val()
+  
 })
 
+const checkLocalStoreage = () => {
+  const currentDate = moment().format("L")
+  if(!localStorage.getItem("date")){
+    localStorage.setItem("date" , currentDate )
+  }else if(localStorage.getItem("date") !== currentDate){
+    localStorage.clear()
 
+  }
+  
+
+}
+
+checkLocalStoreage()
   callEveryHour()
 })
 

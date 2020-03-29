@@ -3,6 +3,13 @@
 ## Description of app
 Created a simple calendar application that allows the user to save events for each hour of the day. This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
+
+## Technology Used
+
+1. Javascript
+2. HTML5
+3. CSS
+
 ## Acceptance Criteria
 
 ```

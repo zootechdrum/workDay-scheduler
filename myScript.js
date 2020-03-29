@@ -8,7 +8,7 @@ $(document).ready(() => {
     const row = $("<div class='row time-block'>")
     const col1 = $("<div class='col-sm-2 hour'><p class='time-block'>" + formatAMPM(i) + "</p></div>");
     const col2 = $("<div id=" + (i) + " data-time=" + i + " class='col-sm-8'><textarea class='description' name='' cols='80' rows='1'></textarea></div>")
-    const col3 = $("<div class='col-sm-2 saveBtn d-flex align-items-center justify-content-center'><i class='fas fa-save'></i></div>")
+    const col3 = $("<div id=button-" +(i)+ " class='col-sm-2 saveBtn d-flex align-items-center justify-content-center'><i class='fas fa-save'></i></div>")
     row.append(col1)
     row.append(col2)
     row.append(col3)
@@ -38,12 +38,18 @@ $(document).ready(() => {
         $("#" + j).addClass("future")
       }
     }
-
   }
 
   const callEveryHour = () => {
     setInterval(updateColor(), 100 * 60 * 60)
   }
+
+
+//When save button is pressed
+$(".container").on( "click", ".saveBtn", () => {
+  console.log("Hello")
+})
+
 
   callEveryHour()
 })
